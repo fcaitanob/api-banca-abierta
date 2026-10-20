@@ -12,7 +12,21 @@ def obtener_tasa():
     return {
         "tipo_prestamo": "personal",
         "moneda": "UYU",
-        "tasa_interes_anual": 35.0,
+        "tasa_interes_anual": 26.0,
         "unidad": "porcentaje",
         "tipo_tasa": "nominal"
     }
+
+@app.get("/api/v1/prestamos/oferta")
+def obtener_oferta():
+    return {
+        "tipo_prestamo": "personal",
+        "moneda": "UYU",
+        "monto_maximo": 120000,
+        "plazo_maximo_meses": 24,
+        "tasa_interes_anual": 26.0,
+        "unidad": "porcentaje",
+        "tipo_tasa": "nominal"
+    }
+
+
